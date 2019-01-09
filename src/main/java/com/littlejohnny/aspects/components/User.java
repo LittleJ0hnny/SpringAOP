@@ -1,20 +1,18 @@
 package com.littlejohnny.aspects.components;
 
-import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component
 public class User implements IUser{
     private String name;
 
     @Override
     public void logIn() {
-        System.out.println(name + "logging in");
+        System.out.println(name + " logging in");
     }
 
     @Override
     public void logOut() {
-        System.out.println(name + "logging out");
+        System.out.println(name + " logging out");
     }
 
     @Override
