@@ -16,7 +16,13 @@ public class User implements IUser{
     }
 
     @Override
+    @TimeTracked
     public String doWork(String text) {
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         return text.toLowerCase();
     }
 

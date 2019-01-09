@@ -9,7 +9,7 @@ public class Main {
         context.register(Config.class);
         context.refresh();
 
-        System.out.println(context.getBean(IUser.class).doWork("......"));
+        context.getBean(IUser.class).logIn();
 
         for(String element : context.getBeanDefinitionNames()) {
             System.out.println(element);
